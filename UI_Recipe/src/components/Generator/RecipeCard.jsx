@@ -31,7 +31,7 @@ const RecipeCard = ({
     };
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/recipes/recipe-details", requestData);
+      const response = await axios.post("https://recipe-no-db.onrender.com/recipes/recipe-details", requestData);
       setDetailedData(response.data);
       setShowModal(true);
     } catch (error) {

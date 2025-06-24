@@ -253,7 +253,7 @@ const MealPlan = ({ weekStartDate = new Date() }) => {
   const handleGenerateNewPlan = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/mealplan/generate-plan", {
+      const response = await fetch("https://recipe-no-db.onrender.com/api/mealplan/generate-plan", {
         method: "POST", 
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ allergies: allergies }), 

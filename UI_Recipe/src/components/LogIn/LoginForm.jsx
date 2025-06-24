@@ -48,7 +48,7 @@ const LoginForm = ({ onForgotPassword = () => {} }) => {
 
     try {
      
-      const response = await axios.post("http://localhost:8000/auth/token", formData);
+      const response = await axios.post("https://recipe-no-db.onrender.com/auth/token", formData);
       
       
       const { access_token, full_name, username } = response.data;

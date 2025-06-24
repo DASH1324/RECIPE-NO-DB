@@ -73,7 +73,7 @@ const ResetPasswordForm = () => {
     setStatus({ type: 'loading', message: '' });
 
     try {
-      const apiUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
+      const apiUrl = import.meta.env.VITE_BACKEND_URL || 'https://recipe-no-db.onrender.com';
       const response = await fetch(`${apiUrl}/auth/reset-password`, {
         method: 'POST',
         headers: {

@@ -34,7 +34,7 @@ function ProfilePage() {
       }
 
       try {
-        const response = await axios.get('http://127.0.0.1:8000/auth/users/me', {
+        const response = await axios.get('https://recipe-no-db.onrender.com/auth/users/me', {
           headers: { Authorization: `Bearer ${token}` },
         });
         const profile = {
@@ -116,7 +116,7 @@ function ProfilePage() {
 
     try {
       const response = await axios.put(
-        'http://127.0.0.1:8000/auth/users/me',
+        'https://recipe-no-db.onrender.com/auth/users/me',
         payload,
         { headers: { Authorization: `Bearer ${token}` } }
       );

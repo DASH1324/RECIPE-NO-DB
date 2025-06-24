@@ -5,7 +5,7 @@ import AllergySelector from "./AllergySelector";
 import "./RecipeGenerator.css";
 
 // The backend API endpoint
-const API_URL = "http://127.0.0.1:8000/api/generator/generate";
+const API_URL = "https://recipe-no-db.onrender.com/api/generator/generate";
 
 const RecipeGenerator = () => {
   // State for user selections

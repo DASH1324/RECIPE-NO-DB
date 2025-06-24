@@ -99,7 +99,7 @@ const IngredientInput = ({ onImageUpload }) => {
     setAttemptedSearch(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/recipes/recommend", {
+      const response = await fetch("https://recipe-no-db.onrender.com/recipes/recommend", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

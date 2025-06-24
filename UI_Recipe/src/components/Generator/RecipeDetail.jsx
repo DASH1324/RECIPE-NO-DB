@@ -67,7 +67,7 @@ const RecipeDetail = ({ data, onClose }) => {
     };
 
     try {
-      const response = await fetch("http://localhost:8000/save/save-recipe", {
+      const response = await fetch("https://recipe-no-db.onrender.com/save/save-recipe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(recipeToSave),

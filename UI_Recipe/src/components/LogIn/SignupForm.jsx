@@ -64,7 +64,7 @@ const SignupForm = ({ onSubmitSuccess = () => {}, onAcknowledgeSuccess = () => {
     setIsLoading(true);
     try {
       // API call to the new endpoint that sends the OTP
-      await axios.post("http://localhost:8000/auth/request-verification", {
+      await axios.post("https://recipe-no-db.onrender.com/auth/request-verification", {
         full_name: data.name,
         username: data.username,
         email: data.email,
@@ -105,7 +105,7 @@ const SignupForm = ({ onSubmitSuccess = () => {}, onAcknowledgeSuccess = () => {
 
     try {
       // API call to verify OTP and create the user
-      const response = await axios.post("http://localhost:8000/auth/verify-and-register", {
+      const response = await axios.post("https://recipe-no-db.onrender.com/auth/verify-and-register", {
         email: pendingData.email,
         otp: otp,
       });

@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-} from "../buttons/card";
+} from "../buttons/Card";
 import { Progress } from "../buttons/Progress";
 import { ChefHat, Sparkles } from "lucide-react";
 import "./AIGenerationLoader.css"; // Import the CSS file

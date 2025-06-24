@@ -1,6 +1,6 @@
 import * as React from "react";
 import clsx from "clsx"; // Import clsx correctly
-import "./Badge.css"; // Import the CSS file
+import "./badge.css"; // Import the CSS file
 
 const Badge = ({ className, variant = "default", ...props }) => {
   return (

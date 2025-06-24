@@ -1,0 +1,61 @@
+/* MealTypeSelector.css */
+
+.meal-type-selector {
+  /* ADDED: Set a max-width and auto margins to center the component block. */
+  max-width: 640px;
+  margin: 2rem auto;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.meal-type-label {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.meal-type-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.meal-type-button {
+  padding: 12px 24px;
+  border: 2px solid #e5e7eb;
+  background-color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: capitalize;
+}
+
+.meal-type-button:hover {
+  border-color: #d1d5db;
+  background-color: #f9fafb;
+}
+
+.meal-type-button.active {
+  background-color: #1f2937;
+  color: white;
+  border-color: #1f2937;
+}
+
+@media (min-width: 640px) {
+  .meal-type-selector {
+    flex-direction: row;
+  }
+
+  .meal-type-label {
+    margin-bottom: 0;
+  }
+}

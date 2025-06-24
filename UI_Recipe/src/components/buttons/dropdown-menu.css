@@ -1,0 +1,130 @@
+.dropdown-sub-trigger {
+    display: flex;
+    cursor: default;
+    user-select: none;
+    align-items: center;
+    border-radius: 4px;
+    padding: 6px 8px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .dropdown-sub-trigger:focus,
+  .dropdown-sub-trigger[data-state="open"] {
+    background-color: var(--accent);
+  }
+  
+  .inset {
+    padding-left: 32px;
+  }
+  
+  .chevron-icon {
+    margin-left: auto;
+    height: 16px;
+    width: 16px;
+  }
+  
+  .dropdown-sub-content {
+    z-index: 50;
+    min-width: 8rem;
+    border-radius: 4px;
+    background: var(--popover);
+    padding: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-content {
+    z-index: 50;
+    min-width: 8rem;
+    border-radius: 4px;
+    background: var(--popover);
+    padding: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-item {
+    display: flex;
+    cursor: default;
+    user-select: none;
+    align-items: center;
+    border-radius: 4px;
+    padding: 6px 8px;
+    font-size: 14px;
+    outline: none;
+    transition: background-color 0.2s;
+  }
+  
+  .dropdown-item:focus {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
+  
+  .dropdown-item[data-disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  .dropdown-checkbox-item {
+    display: flex;
+    cursor: default;
+    user-select: none;
+    align-items: center;
+    padding: 6px 8px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .checkbox-indicator {
+    position: absolute;
+    left: 8px;
+    display: flex;
+    height: 14px;
+    width: 14px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon {
+    height: 16px;
+    width: 16px;
+  }
+  
+  .dropdown-radio-item {
+    display: flex;
+    cursor: default;
+    user-select: none;
+    align-items: center;
+    padding: 6px 8px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .radio-indicator {
+    position: absolute;
+    left: 8px;
+    display: flex;
+    height: 14px;
+    width: 14px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dropdown-label {
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .dropdown-separator {
+    margin: 4px 0;
+    height: 1px;
+    background: var(--muted);
+  }
+  
+  .dropdown-shortcut {
+    margin-left: auto;
+    font-size: 12px;
+    opacity: 0.6;
+    letter-spacing: 0.05em;
+  }
+  

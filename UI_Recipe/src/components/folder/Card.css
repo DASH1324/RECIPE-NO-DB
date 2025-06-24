@@ -1,0 +1,45 @@
+.card {
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  color: #111827;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 1.5rem;
+}
+
+/* Title */
+.card-title {
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+/* Description */
+.card-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Content */
+.card-content {
+  padding: 1.5rem;
+  padding-top: 0;
+}
+
+/* Footer */
+.card-footer {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  padding-top: 0;
+}

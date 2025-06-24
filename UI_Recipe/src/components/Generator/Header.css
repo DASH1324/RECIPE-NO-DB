@@ -1,0 +1,211 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 70px;
+  padding-inline: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #ffffff, #f8f8f8);
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  z-index: 1000; /* Ensures it stays above other elements */
+}
+
+/* Add padding to avoid content hiding under the fixed header */
+main {
+  padding-top: 70px; /* Same as header height */
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  color: #030303;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .brand-name {
+    display: block;
+  }
+}
+
+/* Centering and Enlarging Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .search-bar {
+    display: flex;
+    max-width: 500px; /* Makes the search bar wider */
+  }
+}
+
+/* Make Search Button and Icon Bigger */
+.search-btn {
+  position: absolute;
+  left: 1px; /* Adjusted spacing */
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Increased button size */
+  height: 40px;
+}
+
+.search-icon {
+  width: 20px; /* Bigger icon */
+  height: 20px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.search-btn:hover .search-icon {
+  color: #007bff;
+}
+
+/* Make Search Input Bigger */
+.search-input {
+  width: 100%;
+  padding: 12px 15px;
+  padding-left: 50px; /* Adjusted for bigger icon */
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+}
+
+/* Navigation and Profile */
+.nav-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* Entry (Navigation Links) */
+.nav-links .entry {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 12px 18px;
+  transition: all 0.3s ease;
+  color: #333;
+  text-transform: uppercase;
+  border-radius: 6px;
+  position: relative;
+  background: none !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fix: Properly position and scale hover effect */
+.nav-links .entry::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #4f5459, #8f9396);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: -1;
+}
+
+/* Hover Effect for Entry */
+.nav-links .entry:hover::before {
+  opacity: 1;
+}
+
+.nav-links .entry:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+/* User Profile */
+.user-icon {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #ccc;
+  overflow: hidden;
+  transition: border 0.3s ease;
+}
+
+.user-icon:hover {
+  border-color: #afc2d7;
+}
+
+.user-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

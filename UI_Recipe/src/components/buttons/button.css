@@ -1,0 +1,93 @@
+/* Base styles */
+.button-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+    /* focus-visible: outline-none;
+    focus-visible: ring-1;
+    focus-visible: ring-ring;
+    disabled: pointer-events-none;
+    disabled: opacity-50; */
+  }
+  
+  /* Variants */
+  .button-default {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    box-shadow: var(--shadow);
+  }
+  .button-default:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .button-destructive {
+    background-color: var(--destructive);
+    color: var(--destructive-foreground);
+    box-shadow: var(--shadow-sm);
+  }
+  .button-destructive:hover {
+    background-color: var(--destructive-hover);
+  }
+  
+  .button-outline {
+    border: 1px solid var(--input);
+    background-color: var(--background);
+    box-shadow: var(--shadow-sm);
+  }
+  .button-outline:hover {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
+  
+  .button-secondary {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    box-shadow: var(--shadow-sm);
+  }
+  .button-secondary:hover {
+    background-color: var(--secondary-hover);
+  }
+  
+  .button-ghost:hover {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
+  
+  .button-link {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .button-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Sizes */
+  .button-size-default {
+    height: 36px;
+    padding: 8px 16px;
+  }
+  
+  .button-size-sm {
+    height: 32px;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .button-size-lg {
+    height: 40px;
+    border-radius: 4px;
+    padding: 10px 20px;
+  }
+  
+  .button-size-icon {
+    height: 36px;
+    width: 36px;
+  }
+  

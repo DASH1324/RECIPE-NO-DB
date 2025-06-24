@@ -1,0 +1,105 @@
+/* DailyHomePage.css */
+
+:root {
+  --amber-50: #fffbeb;
+  --orange-50: #fff7ed;
+  --amber-400: #facc15;
+  --orange-400: #fb923c;
+  --gray-500: #6b7281;
+  --gray-600: #4b5563;
+}
+
+/* --- PAGE CONTAINER --- */
+.daily-home-page-container {
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, var(--amber-50), var(--orange-50));
+  padding: 1.5rem; /* Spacing from screen edges */
+  
+  /* Flexbox setup for the whole page */
+  display: flex;
+  flex-direction: column; /* Stacks card and footer */
+  align-items: center;    /* Horizontally centers the card */
+  gap: 1.5rem;            /* Space between card and footer */
+}
+
+@media (min-width: 768px) {
+  .daily-home-page-container {
+    padding: 2rem;
+  }
+}
+
+/* --- CARD LAYOUT OVERRIDES --- */
+.daily-home-card {
+  width: 100%;
+  max-width: 80rem;
+  
+  /* --- THIS IS THE KEY FIX --- */
+  flex-grow: 1;           /* Make the card grow to fill vertical space */
+  display: flex;          /* The card ITSELF must be a flex container... */
+  flex-direction: column; /* ...to manage its header and content vertically. */
+}
+
+.daily-home-card-header {
+  /* We can let the base component handle its padding. */
+  /* This class adds our custom gradient. */
+  background-image: linear-gradient(to right, var(--amber-400), var(--orange-400));
+  color: white;
+  border-bottom: none; /* Remove border if base card has it */
+  flex-shrink: 0; /* Prevents the header from shrinking */
+}
+
+.daily-home-card-title {
+  /* Your existing title styles are fine */
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .daily-home-card-title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+.daily-home-card-content {
+  /* --- THIS IS THE SECOND KEY FIX --- */
+  flex-grow: 1; /* Make the content area grow to fill the card */
+  overflow-y: auto; /* Add scrollbar only if content overflows */
+  
+  /* Your `Cards.css` sets `padding-top: 0`. We override it here. */
+  padding: 1.5rem !important; 
+}
+
+@media (min-width: 768px) {
+  .daily-home-card-content {
+    padding: 2.5rem !important;
+  }
+}
+
+
+/* --- INNER CONTENT AND FOOTER --- */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-wrapper > * + * {
+  margin-top: 2rem;
+}
+
+.description-text {
+  color: var(--gray-600);
+  text-align: center;
+  max-width: 48rem;
+  line-height: 1.6;
+}
+
+.page-footer {
+  text-align: center;
+  color: var(--gray-500);
+  font-size: 0.875rem;
+  flex-shrink: 0; /* Prevents footer from shrinking */
+}

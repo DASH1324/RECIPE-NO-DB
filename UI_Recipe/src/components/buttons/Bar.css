@@ -1,0 +1,48 @@
+.bar-list {
+    display: inline-flex;
+    height: 2.25rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background-color: var(--muted);
+    padding: 0.25rem;
+    color: var(--muted-foreground);
+  }
+  
+  .bar-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 0.375rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .bar-trigger:focus-visible {
+    outline: none;
+    
+  }
+  
+  .bar-trigger:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  .bar-trigger[data-state="active"] {
+    background-color: var(--background);
+    color: var(--foreground);
+    box-shadow: var(--shadow);
+  }
+  
+  .bar-content {
+    margin-top: 0.5rem;
+  }
+  
+  .bar-content:focus-visible {
+    outline: none;
+    
+  }
+  

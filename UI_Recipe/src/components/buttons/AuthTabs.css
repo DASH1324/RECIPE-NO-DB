@@ -1,0 +1,33 @@
+/* AuthTabs.css */
+
+.auth-tabs-container {
+    width: 100%;
+  }
+  
+  .auth-tabs-list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 1.5rem;
+  }
+  
+  .auth-tabs-trigger {
+    position: relative;
+    padding: 0.75rem;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .auth-tabs-trigger[data-state="active"] {
+    color: var(--primary);
+  }
+  
+  .auth-tabs-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--primary);
+  }
+  

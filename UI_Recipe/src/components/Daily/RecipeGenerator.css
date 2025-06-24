@@ -1,0 +1,135 @@
+/* RecipeGenerator.css */
+
+.recipe-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: white;
+  min-height: 100vh;
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #1f2937;
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 32px;
+  }
+}
+
+.section {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.section-heading {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.generate-button {
+  margin-bottom: 32px;
+  padding: 24px 32px;
+  font-size: 18px;
+  background-color: #000904;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.generate-button:hover {
+  background-color: #15803d;
+}
+
+.generate-button:active {
+  transform: translateY(1px);
+}
+
+/* --- FIX APPLIED HERE --- */
+.placeholder-card {
+  width: 100%;
+  padding: 32px;
+  text-align: center;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  
+  /* CHANGED: Swapped solid border for a dashed one to look more like a placeholder */
+  border: 2px dashed #e5e7eb;
+
+  /* ADDED: Reserve vertical space to prevent layout jump */
+  min-height: 500px; 
+
+  /* ADDED: Use flexbox to vertically and horizontally center the text inside */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder-text {
+  font-size: 18px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.6;
+  /* ADDED: Constrain the width of the text for better readability */
+  max-width: 500px;
+}
+/* Add these styles to your existing CSS file */
+
+.regenerate-container {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.regenerate-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: #f8f9fa; /* Lighter background */
+  color: #007bff; /* Blue text */
+  border: 2px solid #007bff; /* Blue border */
+}
+
+.regenerate-button:hover:not(:disabled) {
+  background-color: #e2e6ea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.regenerate-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Spinning animation for the icon */
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

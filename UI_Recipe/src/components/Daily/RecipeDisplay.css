@@ -1,0 +1,185 @@
+/* RecipeDisplay.css */
+
+.recipe-card {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.recipe-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .recipe-layout {
+    flex-direction: row;
+  }
+}
+
+.recipe-image-container {
+  height: 256px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .recipe-image-container {
+    width: 33.333333%;
+    height: auto;
+  }
+}
+
+.recipe-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.meal-type-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: #1f2937;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.recipe-content {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .recipe-content {
+    width: 66.666667%;
+  }
+}
+
+.recipe-header {
+  padding: 24px 24px 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* --- FIX: ADDED THIS NEW RULE TO PREVENT LAYOUT SHIFT --- */
+.recipe-title-section {
+  flex-grow: 1; /* Allows this element to grow and fill available space */
+  margin-right: 16px; /* Adds a gap between the title and the chef icon */
+}
+/* --- END OF FIX --- */
+
+.recipe-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  color: #1f2937;
+}
+
+.recipe-time {
+  display: flex;
+  align-items: center;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.clock-icon {
+  margin-right: 4px;
+  font-size: 16px;
+}
+
+.chef-icon {
+  font-size: 20px;
+}
+
+.recipe-details {
+  padding: 24px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin: 0 0 8px 0;
+  color: #1f2937;
+}
+
+.utensils-icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.separator {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 8px 0 12px 0;
+}
+
+.ingredients-section {
+  margin-bottom: 24px;
+}
+
+.ingredients-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .ingredients-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ingredient-name {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.ingredient-amount {
+  color: #6b7280;
+}
+
+.instructions-list {
+  list-style: decimal;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+.instruction-step {
+  padding-left: 8px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #374151;
+}
+
+.recipe-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #6b7280;
+}

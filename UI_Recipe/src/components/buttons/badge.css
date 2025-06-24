@@ -1,0 +1,48 @@
+/* Base Badge Styles */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid transparent;
+    cursor: default;
+  }
+  
+  /* Variants */
+  .badge-default {
+    background-color: #f5f5f5;
+    color: var(--primary-foreground);
+    box-shadow: var(--shadow);
+  }
+  
+  .badge-default:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .badge-secondary {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+  }
+  
+  .badge-secondary:hover {
+    background-color: var(--secondary-hover);
+  }
+  
+  .badge-destructive {
+    background-color: var(--destructive);
+    color: var(--destructive-foreground);
+    box-shadow: var(--shadow);
+  }
+  
+  .badge-destructive:hover {
+    background-color: var(--destructive-hover);
+  }
+  
+  .badge-outline {
+    color: var(--foreground);
+    border: 1px solid var(--border-color);
+  }
+  

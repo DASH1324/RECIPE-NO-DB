@@ -1,0 +1,47 @@
+/* SocialAuth.css */
+
+:root {
+  --color-text-secondary: #52525b;
+  --color-link-text-subtle: #3f3f46;
+  --color-link-hover-text-subtle: #18181b;
+  --color-border-default: #d4d4d8;
+  --spacing-unit: 0.25rem;
+}
+
+.social-auth-container {
+  width: 100%;
+  margin-top: calc(var(--spacing-unit) * 4);
+}
+
+
+.terms-text {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-text-secondary);
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.terms-link {
+  color: var(--color-link-text-subtle);
+  text-decoration: underline;
+  text-decoration-color: var(--color-border-default);
+  text-underline-offset: 2px;
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.terms-link:hover,
+.terms-link:focus-visible {
+  color: var(--color-link-hover-text-subtle);
+  text-decoration-color: var(--color-link-hover-text-subtle);
+  outline: none;
+}
+
+/*
+.login-form + .social-auth-container {
+  margin-top: calc(var(--spacing-unit) * 2);
+}
+*/

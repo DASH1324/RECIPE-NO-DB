@@ -1,0 +1,104 @@
+/* =================================================== */
+/*             COMPLETE AND CORRECTED CSS              */
+/* =================================================== */
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.home-container {
+    min-height: 100vh;
+    background-color: white;
+}
+
+.cta-section {
+  padding: 4rem 1rem;
+  background-color: #16a34a; /* Green */
+  color: white;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.sign-up-btn {
+  background-color: white;
+  color: #16a34a;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+}
+
+.learn-more-btn {
+  border: 2px solid white;
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+}
+
+
+/* 
+  --- START OF CORRECTED CODE ---
+  The '.footer' selector has been changed to '.home-container .footer'
+  to increase its specificity and ensure it applies correctly.
+*/
+.home-container .footer {
+  background-color: #1f2937; /* Dark Gray */
+  color: white;
+  padding: 3rem 1rem;
+}
+/* --- END OF CORRECTED CODE --- */
+
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #d1d5db;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #374151;
+  color: #9ca3af;
+}

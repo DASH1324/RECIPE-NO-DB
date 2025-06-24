@@ -1,0 +1,238 @@
+/* src/components/Auth/SignupForm.css */
+
+/* Container Styling */
+.signup-container {
+  width: 100%;
+  padding: 2rem;
+  background-color: #fff; /* White */
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft black shadow */
+  max-width: 28rem;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+/* Form Layout */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Form Item */
+.form-item {
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Keep if needed for absolute positioning within items, though not used in current label/input */
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #222; /* Dark Gray / near Black */
+  font-size: 0.95rem;
+}
+
+/* Input Field */
+input {
+  padding: 0.75rem 2.5rem 0.75rem 0.75rem; /* Adjusted for icon space */
+  border: 1px solid #888; /* Medium Gray */
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s; /* Added background-color & color to transition */
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f9f9f9; /* Very Light Gray */
+  color: #111; /* Dark Gray text */
+}
+
+input::placeholder {
+  color: #666; /* Medium Gray placeholder */
+}
+
+input:focus {
+  border-color: #000; /* Black on focus */
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15); /* Subtle black glow */
+  background-color: #fff; /* White background on focus */
+  color: #000; /* Black text on focus */
+}
+
+input:disabled {
+  background-color: #e9ecef; /* Lighter gray for disabled */
+  color: #6c757d; /* Muted text for disabled */
+  cursor: not-allowed;
+  border-color: #ced4da; /* Lighter border for disabled */
+}
+
+
+/* Password Wrapper */
+.password-wrapper {
+  position: relative;
+  display: flex; /* Added to ensure input takes full width inside */
+  align-items: center;
+}
+.password-wrapper input { /* Ensure input inside wrapper takes full width */
+    width: 100%;
+}
+
+
+/* Toggle Button */
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem; /* Added slight padding for easier click */
+  margin: 0;
+  display: flex; /* For centering icon if needed */
+  align-items: center;
+  justify-content: center;
+}
+.password-toggle:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Icon Styling */
+.icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  color: #555; /* Dark Gray */
+  transition: color 0.3s;
+}
+
+.password-toggle:hover .icon {
+  color: #000; /* Black on hover */
+}
+
+/* Error Message (for field validation) */
+.error {
+  color: #b00020; /* Dark red-ish for errors (kept for contrast) */
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* --- Styles for API Messages and Success State --- */
+
+/* General Message Styling (used by success and API error) */
+.message {
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem; /* Space if it's before submit button (for API error) */
+  border-radius: 0.5rem; /* Consistent with input fields */
+  text-align: center;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+  line-height: 1.4;
+}
+.message span { /* For multi-line messages if using <br/> */
+  display: block;
+}
+
+.message-success {
+  background-color: #e6f4ea; /* Softer light green */
+  color: #0c0c0c;         /* Darker, more legible green */
+  border-color: #cce6d2;
+}
+
+.message-error.api-error-message { /* Specific class for API errors shown below form */
+  background-color: #fdecea; /* Softer light red */
+  color: #0a0a0a;         /* Darker, more legible red */
+  border-color: #f9d6d9;
+  margin-top: 0.5rem; /* Space above if it's after last form field */
+  margin-bottom: 1rem; /* Space before submit button */
+}
+
+/* Styles for the Success State UI (when form fields are hidden) */
+.success-state-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem; /* Consistent with form gap */
+  padding: 1rem 0; /* Padding around the success message and button */
+}
+
+.ok-button {
+  padding: 0.75rem 1.5rem; /* Make OK button substantial */
+  background-color: #000; /* Black, consistent with submit */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 0.5rem; /* Consistent */
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+  user-select: none;
+}
+
+.ok-button:hover {
+  background-color: #222; /* Dark Gray hover */
+  transform: translateY(-2px);
+}
+
+.ok-button:active {
+  background-color: #444; /* Medium Gray active */
+  transform: translateY(0);
+}
+
+
+/* Submit Button */
+.submit-button {
+  padding: 0.75rem;
+  background-color: #000; /* Black */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+  user-select: none; /* Prevent text selection on click */
+}
+
+.submit-button:hover:not(:disabled) { /* Added :not(:disabled) */
+  background-color: #222; /* Dark Gray hover */
+  transform: translateY(-2px);
+}
+
+.submit-button:active:not(:disabled) { /* Added :not(:disabled) */
+  background-color: #444; /* Medium Gray active */
+  transform: translateY(0);
+}
+
+.submit-button:disabled {
+    background-color: #aaa; /* Lighter gray for disabled submit */
+    color: #eee;
+    cursor: not-allowed;
+    transform: none; /* No transform when disabled */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 1.5rem;
+    margin: 1rem; /* Add some margin on small screens so it's not edge-to-edge */
+    max-width: calc(100% - 2rem); /* Ensure it fits with margin */
+  }
+
+  input {
+    padding: 0.65rem 2.2rem 0.65rem 0.65rem;
+    font-size: 0.95rem; /* Slightly smaller font for inputs on mobile */
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  .submit-button,
+  .ok-button { /* Apply responsive padding to OK button too */
+    padding: 0.7rem; /* Adjusted padding */
+    font-size: 0.9rem;
+  }
+
+  .message {
+    font-size: 0.85rem;
+  }
+}

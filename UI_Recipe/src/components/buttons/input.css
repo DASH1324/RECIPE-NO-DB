@@ -1,0 +1,97 @@
+.input {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+    outline: none;
+    padding: 8px 16px;
+  }
+  
+  .input:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--ring);
+  }
+  
+  .input:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  .input.default {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    box-shadow: var(--shadow);
+  }
+  
+  .input.default:hover {
+    background-color: rgba(var(--primary-rgb), 0.9);
+  }
+  
+  .input.destructive {
+    background-color: var(--destructive);
+    color: var(--destructive-foreground);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .input.destructive:hover {
+    background-color: rgba(var(--destructive-rgb), 0.9);
+  }
+  
+  .input.outline {
+    border: 1px solid var(--input);
+    background-color: var(--background);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .input.outline:hover {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
+  
+  .input.secondary {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .input.secondary:hover {
+    background-color: rgba(var(--secondary-rgb), 0.8);
+  }
+  
+  .input.ghost:hover {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
+  
+  .input.link {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  
+  .input.link:hover {
+    text-decoration: underline;
+  }
+  
+  .input.sm {
+    height: 32px;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+  
+  .input.lg {
+    height: 40px;
+    border-radius: 0.375rem;
+    padding: 10px 24px;
+  }
+  
+  .input.icon {
+    width: 36px;
+    height: 36px;
+  }
+  

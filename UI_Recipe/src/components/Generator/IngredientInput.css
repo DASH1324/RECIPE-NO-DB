@@ -1,0 +1,272 @@
+:root {
+  --primary: #000902;
+  --primary-hover: #050505;
+  --text-color: #ffffff;
+  --border-color: #020202;
+  --background-light: #f0f8ff;
+  --tag-bg: #b1b4b4;
+  --muted: #b0b0b0; /* Light gray for muted text */
+}
+
+.ingredient-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background: white;
+}
+
+.ingredient-header h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ingredient-header p {
+  color: #0b0b0b;
+  font-size: 18px;
+}
+
+.ingredient-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.ingredient-input {
+  flex-grow: 1;
+  padding: 12px 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 110px;
+  background: none;
+  border: none;
+  color: #080808;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.clear-btn:hover {
+  color: #0b0b0b;
+}
+
+.add-btn {
+  padding: 12px 16px;
+  background: var(--primary);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-btn:hover {
+  background: var(--primary-hover);
+}
+
+.upload-buttons {
+  display: flex;
+  gap: 12px;
+  width: 20%;
+}
+
+.upload-btn,
+.capture-btn {
+  flex-grow: 1;
+  padding: 12px 16px;
+  border: 2px solid var(--border-color);
+  background: white;
+  color: #080808;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.upload-btn:hover,
+.capture-btn:hover {
+  background: var(--background-light);
+}
+
+.ingredient-list {
+  margin-top: 14px;
+}
+
+.ingredient-list p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.no-ingredients {
+  color: var(--muted);
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  background: var(--tag-bg);
+  color: #040404;
+  padding: 8px 14px;
+  border-radius: 24px;
+  font-size: 16px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #0d0d0d;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.remove-btn:hover {
+  color: #040404;
+}
+
+.submit-btn {
+  margin-top: 12px;
+  padding: 14px;
+  background: var(--primary);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+/* Add these styles to IngredientInput.css */
+
+.allergy-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.allergy-modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  outline: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+.modal-close-btn:hover {
+  color: #333;
+}
+
+.modal-body p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.modal-btn-primary,
+.modal-btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.modal-btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+.modal-btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.modal-btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}
+.modal-btn-secondary:hover {
+  background-color: #e0e0e0;
+}

@@ -1,0 +1,18 @@
+/* Base Separator */
+.separator {
+    flex-shrink: 0;
+    background-color: var(--border);
+  }
+  
+  /* Horizontal Separator */
+  .separator.horizontal {
+    height: 1px;
+    width: 100%;
+  }
+  
+  /* Vertical Separator */
+  .separator.vertical {
+    width: 1px;
+    height: 100%;
+  }
+  

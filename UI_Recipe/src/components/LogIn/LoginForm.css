@@ -1,0 +1,190 @@
+/* Monochrome Theme - Clean, Modern UI */
+
+/* Main Container */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 0 1px #ccc, 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 1px #bbb, 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.login-subtitle {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Error Message */
+.error-message {
+  color: #c00;
+  font-size: 0.9rem;
+  text-align: center;
+  /* Added some margin if it's the first element after header */
+  margin-bottom: 1rem;
+}
+
+/* Input Group */
+.input-container {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1.25rem;
+  width: 1.25rem;
+  color: #888;
+  pointer-events: none; /* To ensure clicks go to the input */
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.75rem; /* Right padding for text, left for icon */
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: #fff;
+  color: #111;
+  outline: none;
+  box-sizing: border-box; /* Important for width and padding */
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #111;
+}
+
+/* Password Section - .password-header is not used in your current JSX */
+/* If you had a label and forgot link side-by-side:
+.password-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+*/
+
+/* Password Toggle */
+.toggle-password-btn {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0.25rem; /* Added small padding for easier click */
+  height: auto; /* Let icon size dictate height */
+  width: auto;  /* Let icon size dictate width */
+  cursor: pointer;
+  display: flex; /* For icon centering */
+  align-items: center;
+  justify-content: center;
+}
+
+.icon { /* This class is used for the Eye/EyeOff icons */
+  height: 1.25rem;
+  width: 1.25rem;
+  color: #444;
+}
+
+.toggle-password-btn:hover .icon {
+  color: #000; /* Darken icon on hover */
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+  transform: none; /* Prevent hover transform when disabled */
+}
+
+/* === NEW STYLES FOR FORGOT PASSWORD LINK === */
+.forgot-password-outer-container {
+  text-align: center; /* Center the link */
+  margin-top: 1.25rem; /* Space between Sign In button and this link */
+}
+
+.forgot-password-btn { /* Your existing styles, ensuring they apply correctly */
+  background: none;
+  border: none;
+  padding: 0.25rem 0.5rem; /* Added a bit of padding for better clickability */
+  font-size: 0.875rem;  /* Slightly increased for readability */
+  color: #444;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline-block; /* To allow padding and centering */
+  transition: color 0.2s ease;
+}
+
+.forgot-password-btn:hover:not(:disabled) {
+  color: #000;
+}
+
+.forgot-password-btn:disabled {
+  color: #aaa; /* Lighter color when disabled */
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+
+/* Responsive */
+@media (min-width: 768px) {
+  .login-container {
+    padding: 2.5rem;
+  }
+
+  .login-title {
+    font-size: 2.25rem;
+  }
+
+  .submit-btn {
+    padding: 1rem;
+  }
+}

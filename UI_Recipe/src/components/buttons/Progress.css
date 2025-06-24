@@ -1,0 +1,19 @@
+/* Root progress bar container */
+.progress-root {
+    position: relative;
+    height: 8px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 9999px;
+    background-color: rgba(var(--primary), 0.2);
+  }
+  
+  /* Progress indicator */
+  .progress-indicator {
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+    background-color: var(--primary);
+    transition: transform 0.3s ease-in-out;
+  }
+  

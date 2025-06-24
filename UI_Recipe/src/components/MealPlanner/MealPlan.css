@@ -1,0 +1,454 @@
+/* General Layout */
+.meal-plan-container {
+  width: 100%;
+  background: var(--background);
+  padding: 1rem;
+  padding-top: 5rem;
+}
+
+.meal-plan-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center; /* Center items in column view */
+}
+
+@media (min-width: 768px) { /* Changed breakpoint for better responsiveness */
+  .meal-plan-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.meal-plan-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.meal-plan-title h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.meal-plan-title p {
+  color: var(--muted-foreground);
+}
+
+.meal-plan-actions {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  justify-content: center; /* Center buttons when wrapped */
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.meal-plan-actions .icon-small {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+/* NEW: Style for the number badge inside the Allergies button */
+.allergy-count-badge {
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.75rem;
+  line-height: normal;
+  height: auto;
+}
+
+/* Meal Grid and Cards */
+.meal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* More responsive grid */
+  gap: 1rem;
+}
+
+@media (min-width: 1280px) { /* Adjust for 7 columns on very large screens */
+  .meal-grid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+.day-card {
+  background: white;
+}
+
+.day-title {
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.meal-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.meal-badge {
+  display: flex;
+  justify-content: space-between;
+}
+
+.meal-card {
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.meal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.meal-card img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 0.375rem;
+}
+
+.meal-card h4 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.meal-info {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  margin-top: 0.25rem;
+  align-items: center;
+}
+
+.icon-tiny {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.add-button {
+  width: 100%;
+  height: 5rem;
+  border: 2px dashed #d1d5db;
+  background-color: #f9fafb;
+}
+
+.add-button:hover {
+  background-color: #f3f4f6;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.remove-meal-button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.meal-card:hover .remove-meal-button {
+  opacity: 1;
+}
+
+.remove-meal-button:hover {
+  background: rgba(239, 68, 68, 0.8);
+}
+
+/* --- General Modal Styles --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #333;
+  transition: background 0.2s, color 0.2s;
+}
+.modal-close-button:hover {
+  background: #f0f0f0;
+  color: #000;
+}
+
+.modal-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.modal-body {
+  padding: 1.5rem 2rem 2rem;
+}
+
+.modal-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #111;
+}
+
+.modal-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-details .badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+}
+
+.modal-section {
+  margin-bottom: 1.5rem;
+}
+
+.modal-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.modal-section ul, .modal-section ol {
+  padding-left: 20px;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-section li {
+  line-height: 1.6;
+}
+
+/* --- Add Meal Modal Form Styles --- */
+.add-meal-modal {
+  max-width: 550px;
+}
+
+.add-meal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.add-meal-form input,
+.add-meal-form select,
+.add-meal-form textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.add-meal-form input:focus,
+.add-meal-form select:focus,
+.add-meal-form textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* --- Allergy Selection Modal Styles --- */
+.allergy-modal {
+  max-width: 550px;
+}
+
+.modal-subtitle {
+  color: #6c757d;
+  margin-top: -12px;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+}
+
+.allergy-section {
+  margin-bottom: 24px;
+}
+
+.allergy-section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 8px;
+}
+
+.allergy-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.other-allergy-input-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.other-allergy-input {
+  flex-grow: 1;
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.other-allergy-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.custom-allergy-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.custom-allergy-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.remove-tag-button {
+  background: none;
+  border: none;
+  padding: 2px;
+  margin: 0;
+  margin-left: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.remove-tag-button:hover {
+  color: #111827;
+  background-color: rgba(0,0,0,0.08);
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+
+/* --- Animation & Helper Classes --- */
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes pulse {
+  50% { opacity: .5; }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

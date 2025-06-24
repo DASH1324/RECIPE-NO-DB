@@ -1,0 +1,71 @@
+/* 🌐 Tabs List - Fixed Width with Gray Background */
+.tabs-list {
+  display: inline-flex;
+  min-width: 1250px;          /* Fixed width for the container */
+  height: 48px;               /* Slightly increased height for better proportion */
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 6px 10px;          /* Slightly increased padding */
+  background-color: #f0f0f0;  /* Light gray background */
+  color: #666;                /* Muted gray text color */
+}
+
+/* 🌟 Tabs Trigger (Responsive Button Width) */
+.tabs-trigger {
+  flex: 1;                    /* Each button takes equal available space */
+  min-width: 0;               /* Prevent overflow */
+  height: 100%;               /* Ensure buttons match container height */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 6px;
+  padding: 10px 16px;         /* Increased padding for better button size */
+  font-size: 15px;            /* Slightly larger font for better readability */
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  color: #333;                /* Darker gray text for better readability */
+}
+
+/* Focus Style */
+.tabs-trigger:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #999; /* Soft gray focus ring */
+}
+
+/* Hover & Active State */
+.tabs-trigger:hover,
+.tabs-trigger[data-state="active"] {
+  background-color: #ccc;      /* Medium gray on hover/active */
+  color: #000;                 /* Black text for better contrast */
+  transform: scale(1.02);      /* Slight zoom effect for interactivity */
+}
+
+/* Disabled State */
+.tabs-trigger:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  background-color: #e0e0e0;
+  color: #888;
+}
+
+/* Tabs Content */
+.tabs-content {
+  margin-top: 14px;           /* Slightly more margin for better spacing */
+  padding: 14px;              /* Consistent padding for content */
+  border-radius: 6px;
+  background-color: #fff;      /* Clean white for content */
+  color: #333;                 /* Consistent text color */
+  outline: none;
+  width: 1280px;
+}
+
+/* Focus for Content */
+.tabs-content:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #999;
+}

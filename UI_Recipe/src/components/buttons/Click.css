@@ -1,0 +1,99 @@
+/* Base Click Styles */
+.click {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 0.375rem;
+
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .click:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  /* Variants */
+  .click-default {
+    background-color: #3b82f6;
+    color: #fff;
+  }
+  
+  .click-default:hover {
+    background-color: #2563eb;
+  }
+  
+  .click-destructive {
+    background-color: #ef4444;
+    color: #fff;
+  }
+  
+  .click-destructive:hover {
+    background-color: #dc2626;
+  }
+  
+  .click-outline {
+    border: 1px solid #d1d5db;
+    background-color: transparent;
+    color: #374151;
+  }
+  
+  .click-outline:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .click-secondary {
+    background-color: #6b7280;
+    color: #fff;
+  }
+  
+  .click-secondary:hover {
+    background-color: #4b5563;
+  }
+  
+  .click-ghost {
+    background-color: transparent;
+    color: #374151;
+  }
+  
+  .click-ghost:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .click-link {
+    background-color: transparent;
+    color: #3b82f6;
+    text-decoration: underline;
+  }
+  
+  .click-link:hover {
+    color: #2563eb;
+  }
+  
+  /* Sizes */
+  .click-size-default {
+    height: 2.25rem;
+    padding: 0 1rem;
+  }
+  
+  .click-size-sm {
+    height: 2rem;
+    padding: 0 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .click-size-lg {
+    height: 2.5rem;
+    padding: 0 2rem;
+  }
+  
+  .click-size-icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    padding: 0;
+  }
+  

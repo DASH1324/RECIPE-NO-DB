@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Clock, ChefHat } from "lucide-react";
 import axios from "axios";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../buttons/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../buttons/Card";
 import { Badge } from "../buttons/badge";
 import RecipeDetail from "./RecipeDetail"; // Import the modal
 import "./RecipeCard.css";

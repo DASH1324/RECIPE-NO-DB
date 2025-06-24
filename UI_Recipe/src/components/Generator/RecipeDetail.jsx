@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Clock, ChefHat, Utensils, X, Bookmark } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "../buttons/card";
+import { Card, CardContent, CardHeader, CardTitle } from "../buttons/Card";
 import { Badge } from "../buttons/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../buttons/tabs";
 import Swal from "sweetalert2";

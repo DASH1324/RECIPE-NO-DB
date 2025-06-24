@@ -6,7 +6,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "../buttons/card";
+} from "../buttons/Card";
 import { Button } from "../buttons/button";
 import { Clock, Users, Utensils } from "lucide-react";
 import "./RecipePreview.css";

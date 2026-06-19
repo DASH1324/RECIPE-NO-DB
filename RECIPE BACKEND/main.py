@@ -31,8 +31,10 @@ origins = [
     "http://127.0.0.1:3000",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "https://recipe-no-db.vercel.app"
+    "https://recipe-no-db.vercel.app",
+    "https://recipe-no-qixxuej51-dashs-projects-45cfdd63.vercel.app"
 ]
+
 
 app.add_middleware(
     CORSMiddleware,
